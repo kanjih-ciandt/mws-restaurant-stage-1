@@ -1,0 +1,36 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+a {
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #3397db;
+    text-decoration: none;
+}
+
+/* ====================== Map ====================== */
+#map {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ccc;
+}
+
+
+/* ====================== Menu Side Bar ====================== */
+

@@ -10,8 +10,9 @@ body,td,th,p{
 body {
 	background-color: #fdfdfd;
 	margin: 0;
-	position:relative;
+    width: 100%;
 }
+
 ul, li {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10pt;
@@ -32,8 +33,23 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0 0 20px;
 }
-article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav {
 	display: block;
+}
+
+header{
+  height: 05vh;
+}
+
+footer{
+  height: 05vh;
+}
+
+
+section{
+  display: block;
+  height: 100%;
+  width: 100%;
 }
 #maincontent {
   background-color: #f3f3f3;
@@ -44,7 +60,7 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
+  padding: 5px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -98,8 +114,12 @@ nav h1 a {
     text-decoration: underline;
 }
 /* ====================== Map ====================== */
+#map, body {
+  height: 90vh;
+
+}
 #map {
-  height: 400px;
+  position: absolute;
   width: 100%;
   background-color: #ccc;
 }
@@ -109,6 +129,7 @@ nav h1 a {
   height: 50px;
   background-color: #3397DB;
   align-items: center;
+  left: 0;
 }
 .filter-options h2 {
   color: white;
@@ -272,4 +293,66 @@ nav h1 a {
 }
 #restaurant-hours td {
   color: #666;
+}
+
+/* ====================== Side Panel ====================== */
+
+.cd-panel {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 30%; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+}
+
+.cd-panel--from-left{
+  left: 0;
+}
+
+/* ====================== Responsive ====================== */
+@media screen and (max-width: 600px) {
+  head{
+    height: 05vh;
+  }
+  #map, body {
+    height: 90vh;
+
+  }
+
+  footer{
+    height: 05vh;
+  }
+
+}
+
+@media screen and (max-width: 420px) {
+  head{
+    height: 10vh;
+  }
+  #map, body {
+    height: 80vh;
+
+  }
+
+  footer{
+    height: 10vh;
+  }
+
+}
+
+
+@media screen and (max-width: 375px) {
+  head{
+    height: 10vh;
+  }
+  #map, body {
+    height: 75vh;
+
+  }
+
+  footer{
+    height: 15vh;
+  }
+
 }
