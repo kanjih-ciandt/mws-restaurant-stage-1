@@ -34,45 +34,8 @@ a:hover, a:focus {
 
 /* ====================== Menu Side Bar ====================== */
 
-
-
-#check{
-    display: none;
-}
-
-#icon{
-    cursor: pointer;
-    padding-left: 15px;
-    position: absolute;
-    z-index: 1;
-}
-
-.side-bar {
-    background-color: #0275d8;
-    height: 100%;
-    width: 300px;
-    position: absolute;
-    transition: all .2s linear;
-    left: -300px;
-}
-
-
-
-.link{
-    background-color: #494950;
-    padding: 20px;
-    font-family: Arial;
-    font-size: 12pt;
-    transition: all .2s linear;
-    color: #f4f4f9;
-    border-bottom:  2px solid #222;
-}
-
-.link:hover{
-    background-color: #050542;
-}
-
-#check:checked ~ .side-bar{
-    transform: translateX(300px);
-
+.select-custom {
+    padding: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
 }

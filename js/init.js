@@ -13,6 +13,8 @@
       $('select').formSelect();
     });
 
+    $('.collapsible').collapsible();
+
   }); // end of document ready
 
 
