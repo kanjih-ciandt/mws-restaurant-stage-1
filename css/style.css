@@ -36,6 +36,19 @@ a:hover, a:focus {
 
 .select-custom {
     padding: 5px;
-    padding-left: 30px;
-    padding-right: 30px;
+
+}
+
+
+/* ====================== Restaurant Listing ====================== */
+
+.restaurant-img {
+    padding: 0px;
+    max-width: 80px;
+    min-height: 92px;
+}
+
+.restaurant-card {
+    padding-bottom: 10px;
+    line-height: 22px;
 }

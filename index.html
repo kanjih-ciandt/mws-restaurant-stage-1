@@ -20,39 +20,58 @@
     </div>
   </nav>
   <ul class="sidenav" id="slide_out">
-    <li>
+    <li class="grey darken-1">
       <div class="user-view">
-        <div class="background">
-          <img src="img/1.jpg">
+
+        <a href="#name" ><span class="black-text name">Filter Results:</span></a>
+        <div class="select-custom">
+          <select class="browser-default" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+            <option value="all">All Neighborhoods</option>
+          </select>
+        </div>
+        <div class="select-custom" >
+          <select class="browser-default" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+            <option value="all">All Cuisines</option>
+          </select>
+        </div>
+        <div class="select-custom" >
         </div>
 
-        <a href="#name" ><span class="white-text name">Filter Results:</span></a>
       </div>
     </li>
-    <li >
-      <div class="select-custom">
-        <select class="browser-default">
-          <option value="1" >All Neighborhoods</option>
-          <option value="2">Manhattan</option>
-          <option value="3">Brooklyn</option>
-          <option value="3">Queens</option>
-        </select>
+
+    <li>
+      <div class="restaurant-card">
+        <div class="row">
+          <div class="col s8">
+            <div class="no-padding">Roberta's Pizza</div>
+            <div>261 Moore St, Brooklyn, NY 11206</div>
+            <div><a href="./restaurant.html?id=5">View Details</a></div>
+          </div>
+          <div class="col s4 " >
+            <img class="restaurant-img" src="/img/5.jpg">
+          </div>
+        </div>
       </div>
     </li>
-    <li >
-      <div class="select-custom">
-        <select class="browser-default">
-          <option value="1" >All Cuisines</option>
-          <option value="2">Asian</option>
-          <option value="3">Pizza</option>
-          <option value="3">American</option>
-          <option value="3">Mexican</option>
-        </select>
+
+    <li>
+      <div class="restaurant-card">
+        <div class="row">
+          <div class="col s8">
+            <div>Roberta's Pizza</div>
+            <div>261 Moore St, Brooklyn, NY 11206</div>
+            <div><a href="./restaurant.html?id=5">View Details</a></div>
+          </div>
+          <div class="col s4 " >
+            <img class="restaurant-img" src="/img/5.jpg">
+          </div>
+        </div>
       </div>
     </li>
     <li><div class="divider"></div></li>
-    <li><a class="subheader">Subheader</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+
+
   </ul>
 </header>
 <main id="maincontent">
@@ -71,6 +90,8 @@
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="js/materialize.js"></script>
 <script src="js/init.js"></script>
+<script src="js/main.js"></script>
+<script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPZmmXOsg1Iic6-e5JoQabYJn_0Bv8gMw&libraries=places&callback=initMap"></script>
 
 </body>
