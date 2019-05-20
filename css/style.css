@@ -16,6 +16,7 @@
 a {
     color: orange;
     text-decoration: none;
+    font-size: smaller;
 }
 
 a:hover, a:focus {
@@ -51,4 +52,41 @@ a:hover, a:focus {
 .restaurant-card {
     padding-bottom: 10px;
     line-height: 22px;
+}
+
+.restaurant-title {
+    font-size: medium;
+}
+
+.restaurant-info {
+    font-size: small;
+    line-height: 16px;
+    color: #b0bec5;
+}
+
+@media only screen and (min-width: 600px)  {
+
+    .sidenav {
+        width: 500px;
+    }
+
+    .restaurant-img {
+        padding: 0px;
+        max-width: 139px;
+        min-height: 92px;
+    }
+
+}
+
+@media only screen and (max-width: 600px)  {
+    .sidenav {
+        width: 300px;
+    }
+
+    .restaurant-img {
+        padding: 0px;
+        max-width: 80px;
+        min-height: 75px;
+    }
+
 }
