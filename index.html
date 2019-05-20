@@ -13,23 +13,26 @@
 <body>
 
 <header>
-    <nav>
-        <div class="nav-wrapper grey darken-3">
-            <a href="#" class="sidenav-trigger show-on-large" data-target="slide_out"><i class="material-icons">menu</i>
-            </a>
-            <a href="#" class="brand-logo center">Restaurant Reviews</a>
-        </div>
-    </nav>
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper grey darken-3">
+                <a href="#" class="sidenav-trigger show-on-large" data-target="slide_out"><i class="material-icons">menu</i>
+                </a>
+                <a href="#" class="brand-logo center">Restaurant Reviews</a>
+            </div>
+        </nav>
+    </div>
 
 </header>
 <main id="maincontent">
     <!-- Page Layout here -->
     <div class="row">
         <div class="col s12 m12 l12 no-padding"> <!-- Note that "m8 l9" was added -->
-            <div id="map"></div>
+            <section id="map-container">
+                <div id="map"></div>
+            </section>
         </div>
     </div>
-
 </main>
 
 <!-- Sid-Nav -->
@@ -57,6 +60,12 @@
         <ul id="restaurants-list"></ul>
     </li>
 </ul>
+
+<div class="navbar-fixed">
+    <footer id="footer">
+        Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    </footer>
+</div>
 
 
 <!--  Scripts-->

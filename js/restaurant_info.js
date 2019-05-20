@@ -141,9 +141,11 @@ createReviewHTML = (review) => {
  */
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
-  const li = document.createElement('li');
-  li.innerHTML = restaurant.name;
-  breadcrumb.appendChild(li);
+  const a = document.createElement('a');
+  a.innerHTML = restaurant.name;
+  a.className += ' breadcrumb';
+// <a href="/" class="breadcrumb">Home</a>
+  breadcrumb.appendChild(a);
 }
 
 /**
