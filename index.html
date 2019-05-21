@@ -1,81 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-    <title>Starter Template - Materialize</title>
-
-    <!-- CSS  -->
-    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Restaurant Reviews</title>
 </head>
-<body>
 
+<body >
 <header>
-    <div class="navbar-fixed">
-        <nav>
-            <div class="nav-wrapper grey darken-3">
-                <a href="#" class="sidenav-trigger show-on-large" data-target="slide_out"><i class="material-icons">menu</i>
-                </a>
-                <a href="#" class="brand-logo center">Restaurant Reviews</a>
-            </div>
-        </nav>
-    </div>
-
+    <nav>
+        <h1><a href="/">Restaurant Reviews</a></h1>
+    </nav>
 </header>
+
 <main id="maincontent">
-    <!-- Page Layout here -->
-    <div class="row">
-        <div class="col s12 m12 l12 no-padding"> <!-- Note that "m8 l9" was added -->
-            <section id="map-container">
-                <div id="map"></div>
-            </section>
+    <section>
+        <div class="filter-options">
+            <h2>Filter Results</h2>
+            <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+                <option value="all">All Neighborhoods</option>
+            </select>
+            <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+                <option value="all">All Cuisines</option>
+            </select>
         </div>
-    </div>
+    </section>
+    <section id="map-container">
+        <div id="map"></div>
+    </section>
+    <section>
+        <ul id="restaurants-list"></ul>
+    </section>
 </main>
 
-<!-- Sid-Nav -->
-<ul class="sidenav sidenav-fixed" id="slide_out">
-    <li class="grey darken-1">
-        <div class="user-view">
-
-            <a href="#name"><span class="black-text name">Filter Results:</span></a>
-            <div class="select-custom">
-                <select class="browser-default" id="neighborhoods-select" name="neighborhoods"
-                        onchange="updateRestaurants()">
-                    <option value="all">All Neighborhoods</option>
-                </select>
-            </div>
-            <div class="select-custom">
-                <select class="browser-default" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-                    <option value="all">All Cuisines</option>
-                </select>
-            </div>
-            <div class="select-custom">
-            </div>
-        </div>
-    </li>
-    <li>
-        <ul id="restaurants-list"></ul>
-    </li>
-</ul>
-
-<div class="navbar-fixed">
-    <footer id="footer">
-        Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
-    </footer>
-</div>
-
-
-<!--  Scripts-->
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
-<script src="js/main.js"></script>
 <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPZmmXOsg1Iic6-e5JoQabYJn_0Bv8gMw&libraries=places&callback=initMap"></script>
+<script type="application/javascript" charset="utf-8" src="js/main.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPZmmXOsg1Iic6-e5JoQabYJn_0Bv8gMw&libraries=places&callback=initMap"></script>
+
+
+<footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+</footer>
 
 </body>
+
 </html>

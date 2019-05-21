@@ -153,58 +153,12 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
   addMarkersToMap();
 }
 
+
+
 /**
  * Create restaurant HTML.
  */
 createRestaurantHTML = (restaurant) => {
-  const li = document.createElement('li');
-
-  const divCard = document.createElement('div');
-  divCard.className += " restaurant-card row";
-
-  const divColS8 = document.createElement('div');
-  divColS8.className += " col s8";
-
-  const divPlaceName = document.createElement('div');
-  divPlaceName.className += " no-padding restaurant-title";
-  divPlaceName.innerHTML = restaurant.name;
-
-  const divAddress = document.createElement('div');
-  divAddress.className += " restaurant-info";
-  divAddress.innerHTML = restaurant.address;
-
-  const divDetail = document.createElement('div');
-
-  const aMore = document.createElement('a');
-  aMore.innerHTML = 'View Details';
-  aMore.href = DBHelper.urlForRestaurant(restaurant);
-
-  const divColS4 = document.createElement('div');
-  divColS4.className += " col s4";
-
-  const image = document.createElement('img');
-  image.className = 'restaurant-img-home';
-  image.src = DBHelper.imageUrlForRestaurant(restaurant);
-
-  divDetail.append(aMore)
-  divColS8.append(divPlaceName);
-  divColS8.append(divAddress);
-  divColS8.append(divDetail);
-  divCard.append(divColS8);
-
-  divColS4.append(image);
-  divCard.append(divColS4);
-
-  li.append(divCard);
-
-  return li
-}
-
-
-/**
- * Create restaurant HTML.
- */
-createRestaurantHTML_OLD = (restaurant) => {
   const li = document.createElement('li');
 
   const image = document.createElement('img');
