@@ -82,7 +82,7 @@ nav h1 a {
     background-color: #eee;
     font-size: 17px;
     margin: 0;
-    width: calc(50% - 80px);
+    width: 100%;
 }
 
 /* Display list items side by side */
@@ -204,26 +204,21 @@ nav h1 a {
 }
 .inside #map-container {
     background: blue none repeat scroll 0 0;
-    height: 87%;
-    position: fixed;
+    height: auto;
+    position: relative;
     right: 0;
-    top: 80px;
-    width: 50%;
+    width: auto;
 }
-.inside #map {
-    background-color: #ccc;
-    height: 100%;
-    width: 100%;
-}
+
 .inside #footer {
     bottom: 0;
     position: absolute;
-    width: 50%;
+    width: 100%;
 }
 #restaurant-name {
     color: #f18200;
     font-family: Arial,sans-serif;
-    font-size: 20pt;
+    font-size: 12pt;
     font-weight: 200;
     letter-spacing: 0;
     margin: 15px 0 30px;
@@ -252,12 +247,10 @@ nav h1 a {
 #restaurant-container, #reviews-container {
     border-bottom: 1px solid #d9d9d9;
     border-top: 1px solid #fff;
-    padding: 140px 40px 30px;
-    width: 50%;
+    padding: 10px 10px 10px;
+    width: 100%;
 }
-#reviews-container {
-    padding: 30px 40px 80px;
-}
+
 #reviews-container h2 {
     color: #f58500;
     font-size: 24pt;
@@ -289,7 +282,7 @@ nav h1 a {
 
 @media only screen and (min-width: 1200px) {
 
-    #map-container {
+    .search #map-container {
         background: blue none repeat scroll 0 0;
         height: 87%;
         position: fixed;
@@ -297,17 +290,19 @@ nav h1 a {
         top: 80px;
         width: 71%;
     }
-    #map {
-        background-color: #ccc;
+
+    .search #map {
         height: 100%;
         width: 100%;
+        background-color: #ccc;
     }
+
 }
 
 
 @media only screen and (min-width: 900px) and (max-width: 1200px)  {
 
-    #map-container {
+    .search #map-container {
         background: blue none repeat scroll 0 0;
         height: 87%;
         position: fixed;
@@ -315,16 +310,18 @@ nav h1 a {
         top: 80px;
         width: 60%;
     }
-    #map {
-        background-color: #ccc;
+
+    .search #map {
         height: 100%;
         width: 100%;
+        background-color: #ccc;
     }
+
 }
 
 @media only screen and (min-width: 710px) and (max-width: 900px) {
 
-    #map-container {
+    .search #map-container {
         background: blue none repeat scroll 0 0;
         height: 87%;
         position: fixed;
@@ -332,11 +329,13 @@ nav h1 a {
         top: 80px;
         width: 50%;
     }
-    #map {
-        background-color: #ccc;
+
+    .search #map {
         height: 100%;
         width: 100%;
+        background-color: #ccc;
     }
+
 }
 
 
@@ -352,6 +351,8 @@ nav h1 a {
 
     #restaurants-list .restaurant-img {
         max-width: 318px;
+        width: auto;
+        height: auto;
     }
 
     #footer {

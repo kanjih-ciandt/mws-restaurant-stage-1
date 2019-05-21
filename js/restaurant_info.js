@@ -12,12 +12,7 @@ window.initMap = () => {
       self.map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
         center: restaurant.latlng,
-        scrollwheel: false,
-        mapTypeControl: false,
-        streetViewControl: false,
-        fullscreenControl:false,
-        zoomControl:false
-
+        scrollwheel: false
       });
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
@@ -146,11 +141,9 @@ createReviewHTML = (review) => {
  */
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
-  const a = document.createElement('a');
-  a.innerHTML = restaurant.name;
-  a.className += ' breadcrumb';
-// <a href="/" class="breadcrumb">Home</a>
-  breadcrumb.appendChild(a);
+  const li = document.createElement('li');
+  li.innerHTML = restaurant.name;
+  breadcrumb.appendChild(li);
 }
 
 /**
@@ -161,7 +154,7 @@ getParameterByName = (name, url) => {
     url = window.location.href;
   name = name.replace(/[\[\]]/g, '\\$&');
   const regex = new RegExp(`[?&]${name}(=([^&#]*)|&|#|$)`),
-    results = regex.exec(url);
+      results = regex.exec(url);
   if (!results)
     return null;
   if (!results[2])
