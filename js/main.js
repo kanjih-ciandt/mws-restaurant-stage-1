@@ -94,7 +94,8 @@ window.initMap = () => {
     scrollwheel: false,
     mapTypeControl: false,
     streetViewControl: false,
-    fullscreenControl:false
+    fullscreenControl:false,
+    zoomControl:false
 
   });
   updateRestaurants();
