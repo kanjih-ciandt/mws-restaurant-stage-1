@@ -1,8 +1,7 @@
 let CACHE_NAME = 'mws-restaurants-v1';
 let urlsToCache = [
    '/',
-   '/css/materialize.css',
-   '/css/style.css',
+   '/css/styles.css',
    '/data/restaurants.js',
    '/img/1.jpg',
    '/img/2.jpg',
@@ -15,9 +14,7 @@ let urlsToCache = [
    '/img/9.jpg',
    '/img/10.jpg',
    '/js/dbhelper.js',
-   '/js/init.js',
    '/js/main.js',
-   '/js/materialize.js',
    '/js/restaurant_info.js'
 ];
 

@@ -210,11 +210,7 @@ nav h1 a {
     width: auto;
 }
 
-.inside #footer {
-    bottom: 0;
-    position: absolute;
-    width: 100%;
-}
+
 #restaurant-name {
     color: #f18200;
     font-family: Arial,sans-serif;
@@ -269,9 +265,9 @@ nav h1 a {
     list-style-type: none;
     margin: 0 0 30px;
     overflow: hidden;
-    padding: 0 20px 20px;
+    padding: 0 10px 10px;
     position: relative;
-    width: 85%;
+    width: 80%;
 }
 #reviews-list li p {
     margin: 0 0 10px;
@@ -290,12 +286,30 @@ nav h1 a {
         top: 80px;
         width: 71%;
     }
-
     .search #map {
         height: 100%;
         width: 100%;
         background-color: #ccc;
     }
+
+    .inside #map-container {
+        background: blue none repeat scroll 0 0;
+        height: 87%;
+        position: fixed;
+        right: 0;
+        top: 80px;
+        width: 50%;
+    }
+    .inside #map {
+        background-color: #ccc;
+        height: 100%;
+        width: 100%;
+    }
+
+    #restaurant-container, #reviews-container {
+        width: 50%;
+    }
+
 
 }
 
@@ -317,6 +331,24 @@ nav h1 a {
         background-color: #ccc;
     }
 
+    .inside #map-container {
+        background: blue none repeat scroll 0 0;
+        height: 87%;
+        position: fixed;
+        right: 0;
+        top: 80px;
+        width: 50%;
+    }
+    .inside #map {
+        background-color: #ccc;
+        height: 100%;
+        width: 100%;
+    }
+
+    #restaurant-container, #reviews-container {
+        width: 50%;
+    }
+
 }
 
 @media only screen and (min-width: 710px) and (max-width: 900px) {
@@ -334,6 +366,24 @@ nav h1 a {
         height: 100%;
         width: 100%;
         background-color: #ccc;
+    }
+
+    .inside #map-container {
+        background: blue none repeat scroll 0 0;
+        height: 87%;
+        position: fixed;
+        right: 0;
+        top: 80px;
+        width: 50%;
+    }
+    .inside #map {
+        background-color: #ccc;
+        height: 100%;
+        width: 100%;
+    }
+
+    #restaurant-container, #reviews-container {
+        width: 50%;
     }
 
 }
