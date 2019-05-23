@@ -311,6 +311,8 @@ nav h1 a {
 
     #restaurant-container, #reviews-container {
         width: 50%;
+        top:80px;
+        position: relative;
     }
 
 
@@ -350,6 +352,8 @@ nav h1 a {
 
     #restaurant-container, #reviews-container {
         width: 50%;
+        top:80px;
+        position: relative;
     }
 
 }
@@ -387,6 +391,8 @@ nav h1 a {
 
     #restaurant-container, #reviews-container {
         width: 50%;
+        top:80px;
+        position: relative;
     }
 
 }

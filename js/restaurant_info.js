@@ -12,7 +12,11 @@ window.initMap = () => {
       self.map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
         center: restaurant.latlng,
-        scrollwheel: false
+        scrollwheel: false,
+        mapTypeControl: false,
+        streetViewControl: false,
+        fullscreenControl:false,
+        zoomControl:false
       });
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
@@ -58,6 +62,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   const image = document.getElementById('restaurant-img');
   image.className = 'responsive-img'
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.alt = restaurant.name + ' Restaurant';
 
   const cuisine = document.getElementById('restaurant-cuisine');
   cuisine.innerHTML = restaurant.cuisine_type;
