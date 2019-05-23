@@ -1,8 +1,10 @@
-let CACHE_NAME = 'mws-restaurants-v1';
+let CACHE_NAME = 'mws-restaurants-v2';
 let urlsToCache = [
    '/',
+    '/index.html',
+    '/restaurant.html',
    '/css/styles.css',
-   '/data/restaurants.js',
+   '/data/restaurants.json',
    '/img/1.jpg',
    '/img/2.jpg',
    '/img/3.jpg',
@@ -19,14 +21,14 @@ let urlsToCache = [
 ];
 
 self.addEventListener('install', function(event) {
-   // Perform install steps
-   event.waitUntil(
-       caches.open(CACHE_NAME)
-           .then(function(cache) {
-              console.log('Opened cache');
-              return cache.addAll(urlsToCache);
-           })
-   );
+    // Perform install steps
+    event.waitUntil(
+        caches.open(CACHE_NAME)
+            .then(function(cache) {
+                console.log('Opened cache');
+                return cache.addAll(urlsToCache);
+            })
+    );
 });
 
 self.addEventListener('fetch', function(event) {
@@ -55,6 +57,9 @@ self.addEventListener('fetch', function(event) {
                      return response;
                   }
               );
-           })
+           }).catch( function (err) {
+               console.error(err);
+       })
    );
 });
+
